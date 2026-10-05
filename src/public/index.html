@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TEAssist</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        azullogo: '#3bc3c6',
+                        rojologo: '#ee4983',
+                        grislogo: '#dbdada',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .carousel-item { display: none; }
+        .carousel-item.active { display: flex; }
+        .separador { border-top: 3px solid #ee4983; margin: 0 auto; width: 80%; }
+    </style>
+</head>
+
+<body class="font-sans bg-gray-100">
+    <header class="bg-white text-white py-4 flex items-center">
+        <img src="images/logo.jpg" alt="logotipo" class="rounded-lg h-2/5 w-1/4 mx-4 px-2">
+        <nav class="flex flex-grow mx-3">
+            <div class="mx-3 h-2/4">
+                <a href="#" class="mx-3 rounded-md px-3 py-2 border-2 border-rojologo text-rojologo text-lg font-semibold inline-block text-center hover:border-pink-400 hover:text-pink-400 focus:outline-none">Inicio</a>
+                <a href="#quienes" class="mx-3 rounded-md px-3 py-2 border-2 border-rojologo text-rojologo text-lg font-semibold inline-block text-center hover:border-pink-400 hover:text-pink-400 focus:outline-none">Quienes Somos</a>
+                <a href="#equipo" class="mx-3 rounded-md px-3 py-2 border-2 border-rojologo text-rojologo text-lg font-semibold inline-block text-center hover:border-pink-400 hover:text-pink-400 focus:outline-none">Equipo</a>
+                <a href="#contacto" class="mx-3 rounded-md px-3 py-2 border-2 border-rojologo text-rojologo text-lg font-semibold inline-block text-center hover:border-pink-400 hover:text-pink-400 focus:outline-none">Contacto</a>
+            </div>
+            <div class="ml-auto h-2/4">
+                <a href="#" class="mx-2 px-2 py-2 bg-azullogo border-2 border-blue-300 text-white text-lg font-semibold rounded-md inline-block text-center hover:opacity-70 focus:outline-none">Ingresar</a>
+                <a href="#" class="mx-2 px-2 py-2 bg-azullogo border-2 border-blue-300 text-white text-lg font-semibold rounded-md inline-block text-center hover:opacity-70 focus:outline-none">Registrarse</a>
+                <a href="#" class="mx-2 px-2 py-2 bg-azullogo border-2 border-blue-300 text-white text-lg font-semibold rounded-md inline-block text-center hover:opacity-70 focus:outline-none">Pacientes</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+        <section class="container mx-auto my-10">
+            <div id="carousel" class="relative h-[580px] overflow-hidden">
+                <div class="carousel-inner">
+                    <div class="carousel-item active absolute inset-0 flex flex-col items-center justify-center">
+                        <img src="images/image_1.png" class="w-full h-full object-cover" alt="imagen1">
+                        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center flex-col text-white p-5">
+                            <h2 class="text-5xl font-bold">¿Qué es TEA?</h2>
+                            <p class="mt-4 w-4/6 text-2xl text-center">El trastorno del espectro autista (TEA) es un tipo de trastorno del desarrollo. A menudo aparece en los primeros 2 a 3 años de la vida. El TEA afecta la habilidad del cerebro para desarrollar las habilidades sociales y de comunicación normales.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item absolute inset-0 flex flex-col items-center justify-center">
+                        <img src="images/image_2.png" class="w-full h-full object-cover" alt="imagen2">
+                        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center flex-col text-white p-5">
+                            <h2 class="text-5xl font-bold">Causas</h2>
+                            <p class="mt-4 w-4/6 text-2xl text-center">La causa exacta del TEA se desconoce. Es probable que exista una serie de factores que pueden llevar a que se presente el TEA.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item absolute inset-0 flex flex-col items-center justify-center">
+                        <img src="images/image_3.png" class="w-full h-full object-cover" alt="imagen3">
+                        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center flex-col text-white p-5">
+                            <h2 class="text-5xl font-bold">Síntomas</h2>
+                            <p class="mt-4 w-4/6 text-2xl text-center">La mayoría de los padres de niños con TEA sospechan que algo no está bien cuando el niño tiene 18 meses.</p>
+                        </div>
+                    </div>
+                </div>
+                <button id="prev" class="absolute left-0 z-10 p-4 ml-2 bg-rojologo text-white rounded-full transform -translate-y-1/2 top-1/2 text-3xl">⟨</button>
+                <button id="next" class="absolute right-0 z-10 p-4 mr-2 bg-rojologo text-white rounded-full transform -translate-y-1/2 top-1/2 text-3xl">⟩</button>
+            </div>
+        </section>
+
+        <br><br>
+        <div class="separador"></div>
+        <br><br>
+
+        <section id="quienes" class="mb-12">
+            <!-- mismo contenido que tenés en el blade, sin cambios -->
+            <!-- copiá desde línea 106 hasta 134 del blade, sin directivas -->
+        </section>
+
+        <!-- ... resto igual -->
+    </main>
+
+    <footer class="bg-rojologo text-white py-4 mt-12 font-semibold text-lg">
+        <div class="container mx-auto px-4 text-center">
+            <p>© 2024 Software para Personas con Diagnóstico de Autismo. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+
+        // Carrusel
+        let current = 0;
+        const items = document.querySelectorAll('.carousel-item');
+        function showSlide(n) {
+            items.forEach(i => i.classList.remove('active'));
+            current = (n + items.length) % items.length;
+            items[current].classList.add('active');
+        }
+        document.getElementById('prev').addEventListener('click', () => showSlide(current - 1));
+        document.getElementById('next').addEventListener('click', () => showSlide(current + 1));
+        setInterval(() => showSlide(current + 1), 5000);
+    </script>
+</body>
+</html>
